@@ -25,38 +25,29 @@
         <h5 class="f6 ttu tracked black-80">By Joshua Woods developer</h5>
       </div>
     </header>
-    </article>
-    
-    <div class="helvetica f1 bg-green pa4 ma4 h-auto">
-        Pokemon List
-      
-<div x-data="{pets: [ ], loadedYet: false}"  x-init="{pets} = await (await fetch('https://learnwebcode.github.io/json-example/pets-data.json')).json(); loadedYet = true">
-      
-  <!--loop-->
-  <template x-for="pet in pets">
-     
-    <div id="pet-card">
-     <div>
-        <img src=""/>
-     </div>
-      <div>
-        <h2>
-          
-        </h2>
-      </div>
+  </article>
 
-    </div>
-  </template>
-  
-   <div class=" bg-black-90">
-  
-   </div>
-       
+  <div class="flex-column  helvetica f1 bg-green pa4 ma4 h-auto">
+    Pokemon List
 </div>
+    <div x-data="{pets: [ ], loadedYet: false}"
+      x-init="{pets} = await (await fetch('https://learnwebcode.github.io/json-example/pets-data.json')).json(); loadedYet = true">
 
-    </div>
+      <!--loop-->
+      <template x-for="pet in pets">
      
+    </template>
+
+  </div>
+  <div class="flex justify-center items-center" style="height: 300px;">
+    <div class="tc v-mid pa3 ba b--black bg-light-green">Centered Content</div>
+  </div>
   
+  <div class="flex justify-end  items-center" style="height: 300px;">
+    <div>Centered Content</div>
+  </div>
+  
+
   <script type="module" src="/main.js"></script>
 </body>
 
