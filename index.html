@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="node_modules/tachyons/css/tachyons.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <title>Pokedex Alpine</title>
+</head>
+
+<body>
+  <!--<div id="app"></div>-->
+  <article>
+    <header class="bg-near-white sans-serif">
+      <div class="mw9 center pa4 pt5-ns ph7-l">
+        <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+          <span class="bg-black-90 lh-copy white pa1 tracked-tight">
+            Pokedex
+          </span>
+        </h3>
+        <h4 class="f3 fw1 georgia i">This is a Alpine Js ver of Pokedex project</h4>
+        <h5 class="f6 ttu tracked black-80">By Joshua Woods developer</h5>
+      </div>
+    </header>
+    </article>
+    
+    <div class="helvetica f1 bg-green pa4 ma4 h-auto">
+        Pokemon List
+      
+<div x-data="{pets: [ ], loadedYet: false}"  x-init="{pets} = await (await fetch('https://learnwebcode.github.io/json-example/pets-data.json')).json(); loadedYet = true">
+      
+  <!--loop-->
+  <template x-for="pet in pets">
+     
+    <div id="pet-card">
+     <div>
+        <img src=""/>
+     </div>
+      <div>
+        <h2>
+          
+        </h2>
+      </div>
+
+    </div>
+  </template>
+  
+   <div class=" bg-black-90">
+  
+   </div>
+       
+</div>
+
+    </div>
+     
+  
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
