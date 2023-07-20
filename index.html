@@ -18,36 +18,45 @@
       <div class="mw9 center pa4 pt5-ns ph7-l">
         <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
           <span class="bg-black-90 lh-copy white pa1 tracked-tight">
-            Pokedex
+            Petdex
           </span>
         </h3>
-        <h4 class="f3 fw1 georgia i">This is a Alpine Js ver of Pokedex project</h4>
+        <h4 class="f3 fw1 georgia i">This is a Alpine Js Api project</h4>
         <h5 class="f6 ttu tracked black-80">By Joshua Woods developer</h5>
       </div>
     </header>
   </article>
 
   <div class="flex-column  helvetica f1 bg-green pa4 ma4 h-auto">
-    Pokemon List
-</div>
-    <div x-data="{pets: [ ], loadedYet: false}"
-      x-init="{pets} = await (await fetch('https://learnwebcode.github.io/json-example/pets-data.json')).json(); loadedYet = true">
+  Petdex
+  </div>
 
-      <!--loop-->
-      <template x-for="pet in pets">
-     
+
+
+  <div class="flex flex-wrap" style="height: 300px;">
+    <!-- Flex Container (Row) -->
+  
+  <div class=" flex flex-wrap " x-data="{pets: [ ], loadedYet: false}"
+    x-init="{pets} = await (await fetch('https://learnwebcode.github.io/json-example/pets-data.json')).json(); loadedYet = true">
+
+    <!--loop-->
+    <template x-for="pet in pets">
+
+      <div class="pet card shadow-3 center ma5 w-100 w-20-ns  ">
+        <div class="pet-image">
+          <img :src="pet.photo" />
+        </div>
+
+        <div class="pet-text">
+          <h2 x-text="pet.name"></h2>
+          <p>Species: <span x-text="pet.species"></span></p>
+          <p>Favorite foods:<span x-html="pet.favFoods"></span></p>
+          <button class="cool-button">Toogle Age</button>
+        </div>
+      </div>
     </template>
-
   </div>
-  <div class="flex justify-center items-center" style="height: 300px;">
-    <div class="tc v-mid pa3 ba b--black bg-light-green">Centered Content</div>
-  </div>
-  
-  <div class="flex justify-end  items-center" style="height: 300px;">
-    <div>Centered Content</div>
-  </div>
-  
-
+</div>
   <script type="module" src="/main.js"></script>
 </body>
 
